@@ -25,30 +25,28 @@ set expandtab
 set smartindent
 set autoindent
 
-set number
-" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-highlight LineNr cterm=NONE ctermfg=black ctermbg=NONE
-set showmatch
-
-set hlsearch
-nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
-
-let mapleader=" "
-map <leader>s :source ~/.vimrc<CR>
-
 " Take advantage of 2016's memory abundance
 set hidden
 set history=100
 
+set number
+set showmatch
+
+set hlsearch
+
+" aliases
+let mapleader=" "
+map <leader>s :source ~/.vimrc<CR>
+
+
 nmap <S-l> :bnext<CR>
 nmap <S-h> :bprevious<CR>
 
-"nnoremap <c-j> <c-w>j
-"nnoremap <c-k> <c-w>k
-"nnoremap <c-h> <c-w>h
-"nnoremap <c-l> <c-w>l
-
 imap jj <C-c>
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+nmap <leader>h :noh<CR>
+
+nmap <leader>e :e .<CR>
 
 " :set so=999
 
@@ -102,6 +100,8 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 :hi Comment ctermfg=black
+" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+highlight LineNr cterm=NONE ctermfg=black ctermbg=NONE
 "highlight Comment ctermbg=DarkGray
 "highlight Constant ctermbg=Red
 "highlight Normal ctermbg=Black
