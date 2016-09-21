@@ -14,6 +14,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'majutsushi/tagbar'
+Plugin 'jeetsukumaran/vim-buffergator'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -38,7 +40,6 @@ set hlsearch
 let mapleader=" "
 map <leader>s :source ~/.vimrc<CR>
 
-
 nmap <S-l> :bnext<CR>
 nmap <S-h> :bprevious<CR>
 
@@ -48,6 +49,8 @@ nmap <leader>h :noh<CR>
 
 nmap <leader>e :e .<CR>
 
+nmap <leader>t :TagbarToggle<CR>
+nmap <leader>b :BuffergatorToggle<CR>
 " :set so=999
 
 function! <SID>StripTrailingWhitespaces()
