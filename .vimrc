@@ -9,11 +9,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'albfan/ag.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-filetype indent on
 set nowrap
 set tabstop=2
 set shiftwidth=2
@@ -39,15 +39,10 @@ set history=100
 nmap <S-l> :bnext<CR>
 nmap <S-h> :bprevious<CR>
 
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
-map <D-A-RIGHT> <C-w>l
-map <D-A-LEFT> <C-w>h
-map <D-A-DOWN> <C-w><C-w>
-map <D-A-UP> <C-w>W
+"nnoremap <c-j> <c-w>j
+"nnoremap <c-k> <c-w>k
+"nnoremap <c-h> <c-w>h
+"nnoremap <c-l> <c-w>l
 
 imap jj <C-c>
 
@@ -88,3 +83,12 @@ if executable('ag')
 " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+" vim-tmux-navgigator stuff
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
