@@ -7,3 +7,5 @@ alias gc="git checkout"
 alias gpp="git push"
 alias gp="git pull"
 alias g="git"
+
+alias makecoffee="coffeetags --append --include-vars --recursive"

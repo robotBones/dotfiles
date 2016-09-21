@@ -16,6 +16,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'lukaszkorecki/CoffeeTags'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -49,8 +50,8 @@ nmap <leader>h :noh<CR>
 
 nmap <leader>e :e .<CR>
 
-nmap <leader>t :TagbarToggle<CR>
 nmap <leader>b :BuffergatorToggle<CR>
+nmap <leader>tt :TagbarToggle<CR>
 " :set so=999
 
 function! <SID>StripTrailingWhitespaces()
@@ -95,6 +96,8 @@ let g:ctrlp_custom_ignore = {
   \ }
 " vim-tmux-navgigator stuff
 let g:tmux_navigator_no_mappings = 1
+let g:ctrlp_working_path_mode = 'r'
+let g:CoffeeAutoTagIncludeVars = 1
 
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
