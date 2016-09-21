@@ -1,0 +1,12 @@
+# aliases
+alias bp="vim ~/.bash_profile"
+alias vimrc="vim ~/.vimrc"
+#git aliases
+alias gs="git status"
+alias gc="git checkout"
+alias gpp="git push"
+alias gp="git pull"
+alias g="git"
+alias c="checkout"
+alias p="pull"
+alias pp="push"
