@@ -1,5 +1,5 @@
 # aliases
-alias bp="vim ~/.bash_profile"
+alias bp="vim ~/dotfiles/.bash_profile.local"
 alias vimrc="vim ~/.vimrc"
 #git aliases
 alias gs="git status"
