@@ -11,10 +11,10 @@ alias g="git"
 alias makecoffee="coffeetags --append --include-vars --recursive"
 # Git branch in prompt.
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
 }
 
 parse_repo() {
   basename `git rev-parse --show-toplevel` 2> /dev/null
 }
-export PS1="\[\033[33m\]\$(parse_repo)\[\033[32m\]\$(parse_git_branch)\[\033[00m\] \W $ "
+export PS1="\[\033[33m\]\$(parse_repo)\[\033[32m\]\$(parse_git_branch)\[\033[00m\] \W  "
