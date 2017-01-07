@@ -138,3 +138,9 @@ hi CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
 nmap <leader>f :browse oldfiles<CR>
 nmap <leader>k ddkP
 nmap <leader>j ddjP
+
+nmap <leader>H :b#<CR>
+nmap <leader>J :b#<CR>
+
+" redraw buffer on focus
+au FocusGained * :redraw!
