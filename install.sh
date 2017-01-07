@@ -18,5 +18,5 @@ if test -f $HOME/.tmux.conf; then
   echo "source $PWD/.tmux.conf" >> $HOME/.tmux.conf
   echo "'source $PWD/.tmux.conf' >> $HOME/.tmux.conf"
 else
-  ln -s $PWD/.vimrc $HOME/.tmux.conf
+  ln -s $PWD/.tmux.conf $HOME/.tmux.conf
 fi
