@@ -1,0 +1,5 @@
+:hi LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE
+:hi Comment ctermfg=DarkGrey
+:hi String ctermfg=Grey
+:hi Special ctermfg=43
+:hi Constant ctermfg=147
