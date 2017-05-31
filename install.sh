@@ -1,10 +1,12 @@
 #!/bin/bash
 
 if test -f $HOME/.bash_profile; then
-  echo "source $PWD/.bash_profile.local" >> $HOME/.bash_profile
-  echo "'source $PWD/.bash_profile.local' >> $HOME/.bash_profile"
+  echo "source $PWD/.bash_profile" >> $HOME/.bash_profile
+  echo "'source $PWD/.bash_profile' >> $HOME/.bash_profile"
 else
-  ln -s $PWD/.bash_profile.local $HOME/.bash_profile
+  touch $HOME/.bash_profile
+  echo "source $PWD/.bash_profile" >> $HOME/.bash_profile
+  echo "'source $PWD/.bash_profile' >> $HOME/.bash_profile"
 fi
 
 if test -f $HOME/.vimrc; then
