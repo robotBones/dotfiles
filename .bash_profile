@@ -1,5 +1,5 @@
 # aliases
-alias bp="vim ~/dotfiles/.bash_profile.local"
+alias bp="vim ~/dotfiles/.bash_profile"
 alias vimrc="vim ~/.vimrc"
 #git aliases
 alias gs="git status"
@@ -14,14 +14,14 @@ alias be="bundle exec"
 
 # Git branch in prompt.
 parse_git_branch() {
-  if `git rev-parse --is-inside-work-tree`; then
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
+  if `git rev-parse --is-inside-work-tree 2> /dev/null`; then
+    git branch | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
   fi
 }
 
 parse_repo() {
-  if `git rev-parse --is-inside-work-tree`; then
-    basename `git rev-parse --show-toplevel 2> /dev/null`
+  if `git rev-parse --is-inside-work-tree 2> /dev/null`; then
+    basename `git rev-parse --show-toplevel`
   fi
 }
 export PS1="\[\033[33m\]\$(parse_repo)\[\033[32m\]\$(parse_git_branch)\[\033[00m\] \W:  "
