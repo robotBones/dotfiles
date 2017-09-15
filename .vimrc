@@ -14,6 +14,8 @@ Plug 'majutsushi/tagbar'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'lukaszkorecki/CoffeeTags'
 Plug 'tpope/vim-commentary'
+Plug 'Valloric/YouCompleteMe'
+Plug 'rizzatti/dash.vim'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
@@ -125,7 +127,9 @@ hi StatusLine ctermfg=green ctermbg=NONE
 highlight Constant ctermfg=Blue
 "highlight Normal ctermbg=Black
 "highlight NonText ctermbg=Black
-" highlight Special ctermbg=Red
+" highlight Special ctermbg=None ctermfg=Red
+highlight Pmenu ctermbg=None ctermfg=Red
+highlight PmenuSel ctermbg=Black ctermfg=Red
 "highlight Cursor ctermbg=Green
 highlight LineNr ctermfg=black
 set cursorline

@@ -24,4 +24,10 @@ parse_repo() {
     basename `git rev-parse --show-toplevel`
   fi
 }
+
+add() {
+  script="$(pwd)/$1"
+  ln -s $script $HOME/.cmds/$1
+}
+
 export PS1="\[\033[33m\]\$(parse_repo)\[\033[32m\]\$(parse_git_branch)\[\033[00m\] \W:  "

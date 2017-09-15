@@ -22,3 +22,7 @@ if test -f $HOME/.tmux.conf; then
 else
   ln -s $PWD/.tmux.conf $HOME/.tmux.conf
 fi
+
+if ! test -f $HOME/.cmds; then
+  mkdir $HOME/.cmds
+fi
