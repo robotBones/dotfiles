@@ -25,9 +25,19 @@ parse_repo() {
   fi
 }
 
+show_directory() {
+  REPO=$(parse_repo)
+  LEVEL=$(basename $PWD)
+  if [ "$LOGNAME" == "$LEVEL" ]; then
+    echo "~"
+  elif [ "$REPO" != "$LEVEL" ]; then
+    echo $LEVEL
+  fi
+}
+
 add() {
   script="$(pwd)/$1"
   ln -s $script $HOME/.cmds/$1
 }
 
-export PS1="\[\033[33m\]\$(parse_repo)\[\033[32m\]\$(parse_git_branch)\[\033[00m\] \W:  "
+export PS1="\[\033[32m\]\$(parse_git_branch)\[\033[33m\] \$(parse_repo)\[\033[00m\] \$(show_directory):  "
