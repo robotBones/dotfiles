@@ -143,5 +143,7 @@ nmap <leader>j ddjP
 nmap <leader>H :b#<CR>
 nmap <leader>J :b#<CR>
 
+nnoremap <c-i> i <c-c>r
+
 " redraw buffer on focus
 au FocusGained * :redraw!
