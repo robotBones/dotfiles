@@ -14,6 +14,7 @@ Plug 'majutsushi/tagbar'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'lukaszkorecki/CoffeeTags'
 Plug 'tpope/vim-commentary'
+Plug 'scrooloose/nerdcommenter'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rizzatti/dash.vim'
 " All of your Plugins must be added before the following line
