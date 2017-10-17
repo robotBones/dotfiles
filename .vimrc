@@ -143,7 +143,11 @@ nmap <leader>j ddjP
 nmap <leader>H :b#<CR>
 nmap <leader>J :b#<CR>
 
+" insert 1 character and go back to normal mode
 nnoremap <c-i> i <c-c>r
+nnoremap <c-a> a <c-c>r
 
+" smart indent for functions
+imap <C-]> <C-o>3h<C-o>l<CR><CR><C-o>k<Tab>
 " redraw buffer on focus
 au FocusGained * :redraw!
