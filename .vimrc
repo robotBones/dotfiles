@@ -17,6 +17,11 @@ Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rizzatti/dash.vim'
+Plug 'wavded/vim-stylus'
+Plug 'digitaltoad/vim-pug'
+Plug 'rstacruz/vim-hyperstyle'
+Plug 'dNitro/vim-pug-complete', { 'for': ['jade', 'pug'] }
+Plug 'ternjs/tern_for_vim' " :pc in cmd prompt close preview window
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
@@ -148,6 +153,11 @@ nnoremap <c-i> i <c-c>r
 nnoremap <c-a> a <c-c>r
 
 " smart indent for functions
-imap <C-]> <C-o>3h<C-o>l<CR><CR><C-o>k<Tab>
+imap <C-]> <C-o>2h<C-o>l<CR><CR><C-o>k<Tab>
 " redraw buffer on focus
 au FocusGained * :redraw!
+
+" set autocomplete for html to be automatic
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+" this should close preview window after tab completion is done for ternjs
+autocmd CompleteDone * pclose
