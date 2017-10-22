@@ -19,7 +19,6 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'rizzatti/dash.vim'
 Plug 'wavded/vim-stylus'
 Plug 'digitaltoad/vim-pug'
-Plug 'rstacruz/vim-hyperstyle'
 Plug 'dNitro/vim-pug-complete', { 'for': ['jade', 'pug'] }
 Plug 'ternjs/tern_for_vim' " :pc in cmd prompt close preview window
 " All of your Plugins must be added before the following line
