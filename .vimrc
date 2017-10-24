@@ -160,3 +160,5 @@ au FocusGained * :redraw!
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 " this should close preview window after tab completion is done for ternjs
 autocmd CompleteDone * pclose
+" hide list for netrw
+let g:netrw_list_hide= '.*\.swp$,\.DS_Store$'
