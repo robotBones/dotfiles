@@ -21,6 +21,7 @@ Plug 'wavded/vim-stylus'
 Plug 'digitaltoad/vim-pug'
 Plug 'dNitro/vim-pug-complete', { 'for': ['jade', 'pug'] }
 Plug 'ternjs/tern_for_vim' " :pc in cmd prompt close preview window
+Plug 'moll/vim-node' " gF require statements to go to file
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
