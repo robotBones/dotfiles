@@ -10,6 +10,7 @@ alias g="git"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 alias makecoffee="coffeetags --append --include-vars --recursive"
+alias maketags="ctags -R --exclude=.git --exclude=node_modules --exclude=test"
 alias be="bundle exec"
 
 # Git branch in prompt.
