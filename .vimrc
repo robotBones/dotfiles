@@ -141,6 +141,9 @@ highlight LineNr ctermfg=black
 set cursorline
 hi CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
 " hi CursorLineNR cterm=none ctermfg=yellow
+" change highlight colors for matching parens
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
+
 nmap <leader>f :browse oldfiles<CR>
 nmap <leader>k ddkP
 nmap <leader>j ddjP
