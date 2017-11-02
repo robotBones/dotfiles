@@ -22,6 +22,9 @@ Plug 'digitaltoad/vim-pug'
 Plug 'dNitro/vim-pug-complete', { 'for': ['jade', 'pug'] }
 Plug 'ternjs/tern_for_vim' " :pc in cmd prompt close preview window
 Plug 'moll/vim-node' " gF require statements to go to file
+Plug 'mattn/emmet-vim'
+Plug 'othree/yajs.vim'
+Plug 'chemzqm/vim-jsx-improve'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
@@ -162,3 +165,11 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd CompleteDone * pclose
 " hide list for netrw
 let g:netrw_list_hide= '.*\.swp$,\.DS_Store$'
+
+" emmet plugin for jsx
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends': 'jsx',
+\      'quote_char': "'",
+\  },
+\}
