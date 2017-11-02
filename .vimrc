@@ -112,8 +112,8 @@ let g:ctrlp_extensions = ['tag']
 
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$|node_modules$|vendor$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ 'dir':  '\.git$\|\.yardoc\|public$\|log\|tmp$\|node_modules$\|vendor$',
+  \ 'file': '\.so$\|\.dat$\|\.DS_Store$'
   \ }
 " vim-tmux-navgigator stuff
 let g:tmux_navigator_no_mappings = 1
